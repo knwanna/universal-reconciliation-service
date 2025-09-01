@@ -56,6 +56,3 @@
   to = "/.netlify/functions/stream-chunk"
   status = 200
   force = true
-
-
-
