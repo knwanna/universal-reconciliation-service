@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
+  command = ""  # no build step needed if you have no frontend build
+  publish = "public"  # folder where your static index.html will live
   functions = "netlify/functions"
 
 [[redirects]]
