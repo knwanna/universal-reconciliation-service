@@ -6,7 +6,7 @@
   "scripts": {
     "start": "netlify dev",
     "dev": "netlify dev",
-    "build": "react-scripts build && cp -r build/* dist/",
+    "build": "BUILD_PATH='./dist' react-scripts build",
     "test": "jest",
     "analyze": "python analysis/performance_analysis.py"
   },
