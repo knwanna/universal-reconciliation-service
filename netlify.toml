@@ -1,12 +1,14 @@
 [build]
-  command = "npm run build" # or any build command you have
-  functions = "netlify/functions" # This is where Netlify will look for your functions
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
 
-[functions]
-  node_bundler = "esbuild"
-  external_node_modules = ["express", "serverless-http"]
+[[redirects]]
+  from = "/"
+  to = "/.netlify/functions/metadata"
+  status = 200
+  force = true
 
-# Redirect all requests to the single Express function
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/api"

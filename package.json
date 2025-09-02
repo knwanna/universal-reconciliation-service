@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node src/api.js",
     "dev": "netlify dev",
-    "deploy": "netlify deploy --prod"
+    "deploy": "netlify deploy --prod",
+    "build": "",
+    "test": "jest",
+    "analyze": "python analysis/performance_analysis.py"
   },
   "keywords": [
     "reconciliation",
