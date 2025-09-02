@@ -10,15 +10,9 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Import Swagger setup and swaggerSpec
-const setupSwagger = require('../../src/swagger');
-const swaggerJsdoc = require('swagger-jsdoc');
-const swaggerUi = require('swagger-ui-express');
 
-// Setup Swagger UI & JSON spec
 const baseUrl = process.env.BASE_URL || 'http://localhost:8888';
 
-const swaggerOptions = {
   definition: {
     openapi: '3.0.3',
     info: {
@@ -33,12 +27,8 @@ const swaggerOptions = {
   apis: [path.join(__dirname, 'routes', '*.js')],
 };
 
-const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-app.get('/swagger.json', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
-  res.send(swaggerSpec);
 });
 
 // Import your route handlers
