@@ -1,3 +1,13 @@
+﻿/**
+ * @swagger
+ * /extend-propose:
+ *   get:
+ *     summary: Example GET endpoint for extend-propose
+ *     description: Detailed description for the extend-propose endpoint.
+ *     responses:
+ *       200:
+ *         description: Success response.
+ */
 const express = require('express');
 const router = express.Router();
 const { getModelResponse } = require('../utils');

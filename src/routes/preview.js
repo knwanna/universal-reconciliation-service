@@ -1,3 +1,13 @@
+﻿/**
+ * @swagger
+ * /preview:
+ *   get:
+ *     summary: Example GET endpoint for preview
+ *     description: Detailed description for the preview endpoint.
+ *     responses:
+ *       200:
+ *         description: Success response.
+ */
 const express = require('express');
 const router = express.Router();
 const { getModelResponse } = require('../utils');

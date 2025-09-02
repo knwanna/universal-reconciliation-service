@@ -1,3 +1,13 @@
+﻿/**
+ * @swagger
+ * /stream-chunk:
+ *   get:
+ *     summary: Example GET endpoint for stream-chunk
+ *     description: Detailed description for the stream-chunk endpoint.
+ *     responses:
+ *       200:
+ *         description: Success response.
+ */
 const express = require('express');
 const router = express.Router();
 const { getModelResponse } = require('../utils');

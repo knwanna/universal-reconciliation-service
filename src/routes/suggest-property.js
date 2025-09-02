@@ -1,3 +1,13 @@
+﻿/**
+ * @swagger
+ * /suggest-property:
+ *   get:
+ *     summary: Example GET endpoint for suggest-property
+ *     description: Detailed description for the suggest-property endpoint.
+ *     responses:
+ *       200:
+ *         description: Success response.
+ */
 const express = require('express');
 const router = express.Router();
 const { getModelResponse } = require('../utils');

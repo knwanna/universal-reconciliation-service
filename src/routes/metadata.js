@@ -1,3 +1,13 @@
+﻿/**
+ * @swagger
+ * /metadata:
+ *   get:
+ *     summary: Example GET endpoint for metadata
+ *     description: Detailed description for the metadata endpoint.
+ *     responses:
+ *       200:
+ *         description: Success response.
+ */
 // src/routes/metadata.js
 const express = require('express');
 const router = express.Router();

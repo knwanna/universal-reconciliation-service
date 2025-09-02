@@ -1,5 +1,7 @@
 exports.handler = async (event, context) => {
-  const baseUrl = https://;
+  // Use environment variable BASE_URL or fallback to localhost
+  const baseUrl = process.env.BASE_URL || "http://localhost:8888";
+
   return {
     statusCode: 200,
     headers: { "Access-Control-Allow-Origin": "*" },
@@ -9,7 +11,7 @@ exports.handler = async (event, context) => {
       schemaSpace: "http://example.com/schemas",
       defaultTypes: [{ id: "/general", name: "General Entity" }],
       view: { url: "http://example.com/view/{{id}}" },
-      preview: { url: ${baseUrl}/preview?id={{id}}, width: 400, height: 200 },
+      preview: { url: `${baseUrl}/preview?id={{id}}`, width: 400, height: 200 },
       suggest: {
         entity: { service_url: baseUrl, service_path: "/suggest/entity" },
         type: { service_url: baseUrl, service_path: "/suggest/type" },
