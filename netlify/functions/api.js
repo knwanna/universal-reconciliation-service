@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Import Swagger setup and swaggerSpec
-const setupSwagger = require('../../../src/swagger');
+const setupSwagger = require('../../src/swagger');
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
