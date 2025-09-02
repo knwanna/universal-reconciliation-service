@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A Universal Reconciliation Service API using Express and Gemini API, deployable to Netlify.",
   "main": "netlify/functions/api.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node src/api.js",
     "dev": "netlify dev",
