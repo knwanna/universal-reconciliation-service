@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 require('dotenv').config();
 
-const API_KEY = process.env.GEMINI_API_KEY;
+const API_KEY = proceupdatess.env.GEMINI_API_KEY;
 if (!API_KEY) {
   console.error("GEMINI_API_KEY is not set. Please set the environment variable.");
   process.exit(1);
