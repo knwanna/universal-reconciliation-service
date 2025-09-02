@@ -1,0 +1,12 @@
+﻿[
+  { "name": "Taylor Swift", "query": "Taylor Swift" },
+  { "name": "The Beatles", "query": "Beatles" },
+  { "name": "Beyoncé", "query": "Beyonce" },
+  { "name": "Elvis Presley", "query": "Elvis" },
+  { "name": "Michael Jackson", "query": "Michael Jackson" },
+  { "name": "Queen", "query": "Queen" },
+  { "name": "Led Zeppelin", "query": "Led Zeppelin" },
+  { "name": "Eminem", "query": "Eminem" },
+  { "name": "Adele", "query": "Adele" },
+  { "name": "Drake", "query": "Drake" }
+]

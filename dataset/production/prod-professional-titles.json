@@ -1,0 +1,8 @@
+[
+  { "name": "Certified Public Accountant", "query": "CPA" },
+  { "name": "Chief Executive Officer", "query": "CEO" },
+  { "name": "Doctor of Medicine", "query": "MD" },
+  { "name": "Juris Doctor", "query": "JD" },
+  { "name": "Project Management Professional", "query": "PMP" },
+  { "name": "Registered Nurse", "query": "RN" }
+]

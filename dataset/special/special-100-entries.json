@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Neural Network",
+    "query": "A variant of backpropagation algorithm",
+    "type": "AI"
+  },
+  {
+    "name": "The Godfather",
+    "query": "The Godfather"
+  },
+  {
+    "name": "Apple Inc.",
+    "query": "A variant of Apple"
+  },
+  {
+    "name": "Sarbanes-Oxley Act",
+    "query": "SOX Act",
+    "type": "legal"
+  },
+  {
+    "name": "Quantum Entanglement",
+    "query": "quantum entanglement",
+    "type": "physics"
+  },
+  {
+    "name": "Albert Einstein",
+    "query": "A variant of Einstein"
+  },
+  {
+    "name": "Taylor Swift",
+    "query": "Taylor Swift"
+  },
+  {
+    "name": "Myocardial Infarction",
+    "query": "heart attack",
+    "type": "medical_condition"
+  },
+  {
+    "name": "Microsoft Corp.",
+    "query": "Microsooft"
+  },
+  {
+    "name": "The Lord of the Rings: The Fellowship of the Ring",
+    "query": "Fellowship of the Ring"
+  },
+  {
+    "name": "Gross Domestic Product",
+    "query": "A variant of GDP",
+    "type": "economics"
+  },
+  {
+    "name": "N.W.A.",
+    "query": "NWA"
+  },
+  {
+    "name": "Apple Inc.",
+    "query": "Aapple"
+  },
+  {
+    "name": "The Godfather",
+    "query": "The Godfather"
+  },
+  {
+    "name": "London",
+    "query": "Loondon"
+  }
+]

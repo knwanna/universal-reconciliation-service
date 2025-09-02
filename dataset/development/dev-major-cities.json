@@ -1,0 +1,12 @@
+﻿[
+  { "name": "New York City", "query": "New York", "type": "city" },
+  { "name": "Tokyo", "query": "Tokyo", "type": "city" },
+  { "name": "London", "query": "London", "type": "city" },
+  { "name": "Paris", "query": "Paris", "type": "city" },
+  { "name": "Sydney", "query": "Sydney", "type": "city" },
+  { "name": "Beijing", "query": "Beijing", "type": "city" },
+  { "name": "Rio de Janeiro", "query": "Rio de Janeiro", "type": "city" },
+  { "name": "Mumbai", "query": "Mumbai", "type": "city" },
+  { "name": "Moscow", "query": "Moscow", "type": "city" },
+  { "name": "Cairo", "query": "Cairo", "type": "city" }
+]

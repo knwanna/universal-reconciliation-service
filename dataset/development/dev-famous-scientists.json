@@ -1,0 +1,12 @@
+﻿[
+  { "name": "Albert Einstein", "query": "Einstein", "type": "person" },
+  { "name": "Marie Curie", "query": "Curie", "type": "person" },
+  { "name": "Isaac Newton", "query": "Newton", "type": "person" },
+  { "name": "Galileo Galilei", "query": "Galileo", "type": "person" },
+  { "name": "Nikola Tesla", "query": "Tesla", "type": "person" },
+  { "name": "Charles Darwin", "query": "Darwin", "type": "person" },
+  { "name": "Stephen Hawking", "query": "Hawking", "type": "person" },
+  { "name": "Rosalind Franklin", "query": "Franklin", "type": "person" },
+  { "name": "Alan Turing", "query": "Turing", "type": "person" },
+  { "name": "Linus Pauling", "query": "Pauling", "type": "person" }
+]

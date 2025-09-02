@@ -1,0 +1,12 @@
+﻿[
+  { "name": "Inception", "query": "Inception", "type": "movie" },
+  { "name": "The Godfather", "query": "The Godfather", "type": "movie" },
+  { "name": "Pulp Fiction", "query": "Pulp Fiction", "type": "movie" },
+  { "name": "The Dark Knight", "query": "The Dark Knight", "type": "movie" },
+  { "name": "Forrest Gump", "query": "Forrest Gump", "type": "movie" },
+  { "name": "The Shawshank Redemption", "query": "The Shawshank Redemption", "type": "movie" },
+  { "name": "Fight Club", "query": "Fight Club", "type": "movie" },
+  { "name": "The Matrix", "query": "The Matrix", "type": "movie" },
+  { "name": "Goodfellas", "query": "Goodfellas", "type": "movie" },
+  { "name": "The Silence of the Lambs", "query": "The Silence of the Lambs", "type": "movie" }
+]

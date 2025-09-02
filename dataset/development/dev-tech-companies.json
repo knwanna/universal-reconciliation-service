@@ -1,0 +1,13 @@
+﻿[
+  { "name": "Alphabet Inc.", "query": "Google" },
+  { "name": "Apple Inc.", "query": "Apple" },
+  { "name": "Microsoft Corp.", "query": "Microsoft" },
+  { "name": "Amazon.com Inc.", "query": "Amazon" },
+  { "name": "Meta Platforms, Inc.", "query": "Facebook", "type": "company" },
+  { "name": "Tesla, Inc.", "query": "Tesla" },
+  { "name": "Nvidia Corporation", "query": "Nvidia" },
+  { "name": "Alibaba Group Holding Ltd.", "query": "Alibaba" },
+  { "name": "Samsung Electronics Co., Ltd.", "query": "Samsung" },
+  { "name": "Intel Corporation", "query": "Intel" },
+  { "name": "Netflix, Inc.", "query": "Netflix" }
+]

@@ -1,0 +1,12 @@
+﻿[
+  { "name": "New York Yankees", "query": "Yankees" },
+  { "name": "Los Angeles Lakers", "query": "Lakers" },
+  { "name": "Real Madrid C.F.", "query": "Real Madrid" },
+  { "name": "FC Barcelona", "query": "Barcelona" },
+  { "name": "Manchester United F.C.", "query": "Manchester United" },
+  { "name": "Boston Red Sox", "query": "Red Sox" },
+  { "name": "Chicago Bulls", "query": "Chicago Bulls" },
+  { "name": "Green Bay Packers", "query": "Green Bay Packers" },
+  { "name": "Golden State Warriors", "query": "Golden State Warriors" },
+  { "name": "Pittsburgh Steelers", "query": "Steelers" }
+]
