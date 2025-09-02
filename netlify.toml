@@ -1,58 +1,14 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
-  functions = "netlify/functions"
+  command = "npm run build" # or any build command you have
+  functions = "netlify/functions" # This is where Netlify will look for your functions
 
-[[redirects]]
-  from = "/"
-  to = "/.netlify/functions/metadata"
-  status = 200
-  force = true
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["express", "serverless-http"]
 
+# Redirect all requests to the single Express function
 [[redirects]]
-  from = "/reconcile"
-  to = "/.netlify/functions/reconcile"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/suggest/entity"
-  to = "/.netlify/functions/suggest-entity"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/suggest/type"
-  to = "/.netlify/functions/suggest-type"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/suggest/property"
-  to = "/.netlify/functions/suggest-property"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/preview"
-  to = "/.netlify/functions/preview"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/extend/propose"
-  to = "/.netlify/functions/extend-propose"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/extend"
-  to = "/.netlify/functions/extend"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/stream-chunk"
-  to = "/.netlify/functions/stream-chunk"
+  from = "/*"
+  to = "/.netlify/functions/api"
   status = 200
   force = true
