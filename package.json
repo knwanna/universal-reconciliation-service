@@ -7,9 +7,9 @@
     "start": "node src/api.js",
     "dev": "netlify dev",
     "deploy": "netlify deploy --prod",
-    "build": "",
     "test": "jest",
-    "analyze": "python analysis/performance_analysis.py"
+    "analyze": "python analysis/performance_analysis.py",
+    "build": "echo 'No build needed for serverless functions'"
   },
   "keywords": [
     "reconciliation",
