@@ -1,7 +1,7 @@
-const express = require('express');
+﻿const express = require('express');
+const serverless = require('serverless-http');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const path = require('path');
 
 const app = express();
 
@@ -10,72 +10,48 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Import route handlers
+const metadata = require('./metadata');
+const reconcile = require('./reconcile');
+const preview = require('./preview');
+const suggestEntity = require('./suggest-entity');
+const suggestType = require('./suggest-type');
+const suggestProperty = require('./suggest-property');
+const extend = require('./extend');
+const extendPropose = require('./extend-propose');
+const streamChunk = require('./stream-chunk');
 
-const baseUrl = process.env.BASE_URL || 'http://localhost:8888';
+// Mount routes
+app.get('/.netlify/functions/api', metadata.handler);
+app.post('/.netlify/functions/api/reconcile', reconcile.handler);
+app.get('/.netlify/functions/api/preview', preview.handler);
+app.get('/.netlify/functions/api/suggest/entity', suggestEntity.handler);
+app.get('/.netlify/functions/api/suggest/type', suggestType.handler);
+app.get('/.netlify/functions/api/suggest/property', suggestProperty.handler);
+app.post('/.netlify/functions/api/extend', extend.handler);
+app.post('/.netlify/functions/api/extend/propose', extendPropose.handler);
+app.post('/.netlify/functions/api/stream-chunk', streamChunk.handler);
 
-  definition: {
-    openapi: '3.0.3',
-    info: {
-      title: 'Universal Reconciliation Service API',
-      version: '1.0.0',
-      description: 'API for reconciliation service using Express and Gemini API',
-      contact: { name: 'Google', email: 'support@example.com' },
-      license: { name: 'MIT', url: 'https://opensource.org/licenses/MIT' },
-    },
-    servers: [{ url: baseUrl, description: 'API base URL' }],
-  },
-  apis: [path.join(__dirname, 'routes', '*.js')],
-};
-
-
-  res.setHeader('Content-Type', 'application/json');
+// Health check endpoint
+app.get('/.netlify/functions/api/health', (req, res) => {
+  res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
-// Import your route handlers
-const reconcileRouter = require('./routes/reconcile');
-const metadataRouter = require('./routes/metadata');
-const previewRouter = require('./routes/preview');
-const suggestRouter = require('./routes/suggest-entity');
-const suggestPropertyRouter = require('./routes/suggest-property');
-const suggestTypeRouter = require('./routes/suggest-type');
-const extendRouter = require('./routes/extend');
-const extendProposeRouter = require('./routes/extend-propose');
-const streamChunkRouter = require('./routes/stream-chunk');
-
-// Register routes
-app.use('/', metadataRouter);
-app.use('/reconcile', reconcileRouter);
-app.use('/preview', previewRouter);
-app.use('/suggest/entity', suggestRouter);
-app.use('/suggest/property', suggestPropertyRouter);
-app.use('/suggest/type', suggestTypeRouter);
-app.use('/extend', extendRouter);
-app.use('/extend/propose', extendProposeRouter);
-app.use('/stream-chunk', streamChunkRouter);
-
-// Catch-all 404 for unknown routes
-app.use((req, res, next) => {
+// Catch-all 404
+app.use((req, res) => {
   res.status(404).json({
     error: 'Not Found',
-    message: `The requested URL ${req.originalUrl} was not found on this server.`,
+    message: `The requested URL ${req.originalUrl} was not found.`
   });
 });
 
-// Global error handler (production ready)
+// Error handler
 app.use((err, req, res, next) => {
-  console.error('Server error:', err.stack || err);
-
-  // Customize error response based on environment
-  const response = {
+  console.error('Server error:', err);
+  res.status(500).json({
     error: 'Internal Server Error',
-  };
-
-  if (process.env.NODE_ENV !== 'production') {
-    response.message = err.message;
-    response.stack = err.stack;
-  }
-
-  res.status(500).json(response);
+    message: process.env.NODE_ENV === 'development' ? err.message : 'Something went wrong'
+  });
 });
 
-module.exports = app;
+module.exports.handler = serverless(app);

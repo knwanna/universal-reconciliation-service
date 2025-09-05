@@ -1,40 +1,30 @@
 {
   "name": "universal-reconciliation-service",
   "version": "1.0.0",
-  "description": "A Universal Reconciliation Service API using Express and Gemini API, deployable to Netlify.",
+  "description": "Universal Reconciliation Service API for Netlify",
   "main": "netlify/functions/api.js",
-  "type": "commonjs",
   "scripts": {
-    "start": "node src/api.js",
     "dev": "netlify dev",
-    "deploy": "netlify deploy --prod",
-    "test": "jest",
-    "analyze": "python analysis/performance_analysis.py",
-    "build": "echo 'No build needed for serverless functions'"
+    "build": "echo 'No build step required'",
+    "deploy": "netlify deploy --prod"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "serverless-http": "^3.2.0",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "netlify-cli": "^12.0.0"
   },
   "keywords": [
     "reconciliation",
     "api",
     "openrefine",
-    "gemini",
     "netlify",
-    "serverless",
-    "express"
+    "serverless"
   ],
-  "author": "Google",
-  "license": "MIT",
-  "dependencies": {
-    "@google/generative-ai": "^0.1.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "serverless-http": "^3.2.0",
-    "uuid": "^9.0.1",
-    "winston": "^3.8.2"
-  },
-  "devDependencies": {
-    "jest": "^29.7.0",
-    "netlify-cli": "^23.5.0",
-    "supertest": "^6.3.3"
-  }
+  "author": "Your Name",
+  "license": "MIT"
 }

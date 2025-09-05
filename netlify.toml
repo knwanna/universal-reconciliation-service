@@ -1,19 +1,29 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
+  publish = "public"
   functions = "netlify/functions"
 
+[build.environment]
+  NODE_VERSION = "18"
+
+[functions]
+  node_bundler = "esbuild"
+
 [[redirects]]
-  from = "/"
-  to = "/.netlify/functions/metadata"
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
   status = 200
-  force = true
+
+[[redirects]]
+  from = "/reconcile"
+  to = "/.netlify/functions/api/reconcile"
+  status = 200
+
+[[redirects]]
+  from = "/metadata"
+  to = "/.netlify/functions/api"
+  status = 200
 
 [[redirects]]
   from = "/*"
-  to = "/.netlify/functions/api"
+  to = "/index.html"
   status = 200
-  force = true
-
-[functions]
-  included_files = ["src/swagger.js"]
