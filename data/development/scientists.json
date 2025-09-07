@@ -1,0 +1,29 @@
+[
+  {
+    "id": "scientist_1",
+    "name": "Albert Einstein",
+    "type": ["scientist", "physicist"],
+    "description": "Theoretical physicist who developed relativity theory",
+    "birthYear": 1879,
+    "deathYear": 1955,
+    "nationality": "German"
+  },
+  {
+    "id": "scientist_2",
+    "name": "Marie Curie",
+    "type": ["scientist", "chemist", "physicist"],
+    "description": "Pioneering researcher on radioactivity",
+    "birthYear": 1867,
+    "deathYear": 1934,
+    "nationality": "Polish"
+  },
+  {
+    "id": "scientist_3",
+    "name": "Isaac Newton",
+    "type": ["scientist", "mathematician", "physicist"],
+    "description": "Formulated laws of motion and universal gravitation",
+    "birthYear": 1643,
+    "deathYear": 1727,
+    "nationality": "English"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "company_1",
+    "name": "Google LLC",
+    "type": ["company", "technology"],
+    "description": "Multinational technology company specializing in Internet-related services",
+    "founded": 1998,
+    "employees": 156500,
+    "headquarters": "Mountain View, California"
+  },
+  {
+    "id": "company_2",
+    "name": "Microsoft Corporation",
+    "type": ["company", "technology"],
+    "description": "Multinational technology corporation producing computer software",
+    "founded": 1975,
+    "employees": 181000,
+    "headquarters": "Redmond, Washington"
+  }
+]

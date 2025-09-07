@@ -1,29 +1,48 @@
 {
   "name": "universal-reconciliation-service",
-  "version": "1.0.0",
-  "description": "Universal Reconciliation Service API for Netlify",
+  "version": "2.0.0",
+  "description": "Enhanced Universal Reconciliation Service with Gemini AI integration",
   "main": "netlify/functions/api.js",
   "scripts": {
     "dev": "netlify dev",
     "build": "echo 'No build step required'",
-    "deploy": "netlify deploy --prod"
+    "deploy": "netlify deploy --prod",
+    "test": "jest",
+    "test:performance": "node tests/performance/load-test.js",
+    "test:accuracy": "node tests/accuracy/accuracy-test.js",
+    "docs:generate": "node utils/generate-docs.js",
+    "lint": "eslint ."
   },
   "dependencies": {
     "express": "^4.18.2",
     "serverless-http": "^3.2.0",
     "cors": "^2.8.5",
     "body-parser": "^1.20.2",
-    "node-fetch": "^2.6.7"
+    "node-fetch": "^2.6.7",
+    "@google/generative-ai": "^0.2.1",
+    "rate-limiter-flexible": "^2.4.1",
+    "helmet": "^7.1.0",
+    "compression": "^1.7.4",
+    "joi": "^17.11.0",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
-    "netlify-cli": "^12.0.0"
+    "netlify-cli": "^12.0.0",
+    "jest": "^29.7.0",
+    "eslint": "^8.56.0",
+    "supertest": "^6.3.3",
+    "artillery": "^2.0.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
   },
   "keywords": [
     "reconciliation",
     "api",
     "openrefine",
     "netlify",
-    "serverless"
+    "serverless",
+    "gemini-ai",
+    "entity-matching"
   ],
   "author": "Your Name",
   "license": "MIT"
