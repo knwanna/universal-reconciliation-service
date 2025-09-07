@@ -1,7 +1,0 @@
-[
-  { "name": "Miranda v. Arizona", "query": "Miranda rights" },
-  { "name": "Roe v. Wade", "query": "Roe v. Wade" },
-  { "name": "Brown v. Board of Education", "query": "Brown vs Board", "type": "legal_case" },
-  { "name": "Marbury v. Madison", "query": "judicial review case", "type": "legal_case" },
-  { "name": "Plessy v. Ferguson", "query": "separate but equal", "type": "legal_case" }
-]

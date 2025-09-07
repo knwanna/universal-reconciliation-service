@@ -1,0 +1,2271 @@
+PROJECT AUDIT REPORT
+Generated: 2025-09-07 06:46:49
+Project Path: C:\Users\Fred\Documents\GitHub\universal-reconciliation-service
+Audit Script: ProjectAudit.ps1
+Script Version: 1.2
+
+
+================================================================================
+============================== PROJECT STRUCTURE ===============================
+================================================================================
+
+Directory tree of the project:
+
+Folder PATH listing
+Volume serial number is E203-E8A1
+C:\USERS\FRED\DOCUMENTS\GITHUB\UNIVERSAL-RECONCILIATION-SERVICE
+|   .env
+|   .gitignore
+|   netlify.toml
+|   package.json
+|   ProjectAudit.ps1
+|   ProjectAuditReport.txt
+|   test_reconciliation.js
+|   
++---analysis
+|       performance_analysis.py
+|       
++---data
+|   |   sample.json
+|   |   sample.txt
+|   |   
+|   +---development
+|   |       scientists.json
+|   |       
+|   \---production
+|           companies.json
+|           
++---docs
++---netlify
+|   \---functions
+|       |   api.js
+|       |   extend-propose.js
+|       |   extend.js
+|       |   metadata.js
+|       |   preview.js
+|       |   reconcile.js
+|       |   stream-chunk.js
+|       |   suggest-entity.js
+|       |   suggest-property.js
+|       |   suggest-type.js
+|       |   utils.js
+|       |   
+|       \---routes
++---public
+|       index.html
+|       
++---routes
+|       reconcile.js
+|       suggest.js
+|       
++---src
+|   |   api.js
+|   |   swagger.js
+|   |   utils.js
+|   |   
+|   \---routes
+|           extend-propose.js
+|           extend.js
+|           metadata.js
+|           preview.js
+|           stream-chunk.js
+|           suggest-property.js
+|           
++---tests
+|   |   accuracy.test.js
+|   |   api.test.js
+|   |   performance.test.js
+|   |   stream.test.js
+|   |   
+|   +---accuracy
+|   \---performance
+\---utils
+        gemini-service.js
+        
+
+================================================================================
+================================ FILE INVENTORY ================================
+================================================================================
+
+List of all files in the project:
+
+[1] .gitignore | Size: 478 bytes | Lines: 48 | Modified: 09/07/2025 04:27:11
+[2] analysis\performance_analysis.py | Size: 1.57 KB | Lines: 49 | Modified: 09/02/2025 00:42:47
+[3] data\development\scientists.json | Size: 774 bytes | Lines: 29 | Modified: 09/07/2025 04:41:25
+[4] data\production\companies.json | Size: 575 bytes | Lines: 20 | Modified: 09/07/2025 04:41:25
+[5] data\sample.json | Size: 159 bytes | Lines: 5 | Modified: 09/07/2025 04:12:56
+[6] data\sample.txt | Size: 124 bytes | Lines: 2 | Modified: 09/07/2025 04:12:56
+[7] netlify.toml | Size: 991 bytes | Lines: 58 | Modified: 09/07/2025 04:27:11
+[8] netlify\functions\api.js | Size: 2.92 KB | Lines: 114 | Modified: 09/07/2025 04:27:51
+[9] netlify\functions\extend.js | Size: 1.11 KB | Lines: 36 | Modified: 09/02/2025 17:46:43
+[10] netlify\functions\extend-propose.js | Size: 1023 bytes | Lines: 35 | Modified: 09/02/2025 17:46:43
+[11] netlify\functions\metadata.js | Size: 1.16 KB | Lines: 28 | Modified: 09/02/2025 17:46:43
+[12] netlify\functions\preview.js | Size: 795 bytes | Lines: 24 | Modified: 09/02/2025 17:46:43
+[13] netlify\functions\reconcile.js | Size: 1.07 KB | Lines: 35 | Modified: 09/02/2025 17:46:43
+[14] netlify\functions\stream-chunk.js | Size: 1.95 KB | Lines: 63 | Modified: 09/02/2025 17:46:43
+[15] netlify\functions\suggest-entity.js | Size: 1.04 KB | Lines: 36 | Modified: 09/02/2025 17:46:43
+[16] netlify\functions\suggest-property.js | Size: 1013 bytes | Lines: 35 | Modified: 09/02/2025 17:46:43
+[17] netlify\functions\suggest-type.js | Size: 981 bytes | Lines: 35 | Modified: 09/02/2025 17:46:43
+[18] netlify\functions\utils.js | Size: 1.32 KB | Lines: 46 | Modified: 09/02/2025 17:46:43
+[19] package.json | Size: 1.36 KB | Lines: 54 | Modified: 09/07/2025 06:09:36
+[20] public\index.html | Size: 3.31 KB | Lines: 120 | Modified: 09/07/2025 04:39:59
+[21] routes\reconcile.js | Size: 2.95 KB | Lines: 98 | Modified: 09/07/2025 04:27:51
+[22] routes\suggest.js | Size: 1.78 KB | Lines: 59 | Modified: 09/07/2025 04:27:51
+[23] src\api.js | Size: 1.32 KB | Lines: 42 | Modified: 09/02/2025 13:30:38
+[24] src\routes\extend.js | Size: 1.58 KB | Lines: 45 | Modified: 09/02/2025 16:58:20
+[25] src\routes\extend-propose.js | Size: 1.20 KB | Lines: 38 | Modified: 09/02/2025 16:58:20
+[26] src\routes\metadata.js | Size: 1.37 KB | Lines: 47 | Modified: 09/02/2025 16:58:21
+[27] src\routes\preview.js | Size: 1.03 KB | Lines: 36 | Modified: 09/02/2025 16:58:21
+[28] src\routes\stream-chunk.js | Size: 1.66 KB | Lines: 48 | Modified: 09/02/2025 16:58:21
+[29] src\routes\suggest-property.js | Size: 1.53 KB | Lines: 48 | Modified: 09/02/2025 16:58:21
+[30] src\swagger.js | Size: 925 bytes | Lines: 38 | Modified: 09/02/2025 16:59:39
+[31] src\utils.js | Size: 5.36 KB | Lines: 165 | Modified: 09/02/2025 16:05:53
+[32] test_reconciliation.js | Size: 4.39 KB | Lines: 126 | Modified: 09/02/2025 14:38:06
+[33] tests\accuracy.test.js | Size: 1.17 KB | Lines: 30 | Modified: 09/02/2025 13:43:01
+[34] tests\api.test.js | Size: 899 bytes | Lines: 25 | Modified: 09/07/2025 04:27:51
+[35] tests\performance.test.js | Size: 1.17 KB | Lines: 32 | Modified: 09/02/2025 13:42:37
+[36] tests\stream.test.js | Size: 1.30 KB | Lines: 31 | Modified: 09/02/2025 13:42:18
+[37] utils\gemini-service.js | Size: 1.48 KB | Lines: 53 | Modified: 09/07/2025 04:27:51
+
+Total files included in audit: 37
+
+================================================================================
+================================ FILE CONTENTS =================================
+================================================================================
+
+Detailed contents of each file:
+
+================================================================================
+FILE: .gitignore
+================================================================================
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Build outputs
+.netlify/
+dist/
+build/
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+.nyc_output/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+
+
+
+================================================================================
+FILE: analysis\performance_analysis.py
+================================================================================
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy.stats import ttest_ind
+
+# Sample data (replace with actual test results)
+latencies = {
+    'reconcile': [150, 200, 180, 220, 190, 210, 170, 230, 195, 205],
+    'stream_chunk': [120, 130, 140, 110, 150, 125, 135, 145, 115, 130]
+}
+accuracies = {
+    'reconcile': [0.95, 0.90, 0.92, 0.88, 0.94, 0.91, 0.89, 0.93, 0.90, 0.92],
+    'stream_chunk': [0.85, 0.87, 0.90, 0.88, 0.86, 0.89, 0.87, 0.88, 0.86, 0.90]
+}
+
+# Statistical significance
+reconcile_lat = latencies['reconcile']
+stream_lat = latencies['stream_chunk']
+t_stat_lat, p_value_lat = ttest_ind(reconcile_lat, stream_lat)
+print(f"Latency T-test: t={t_stat_lat:.2f}, p={p_value_lat:.4f}")
+
+reconcile_acc = accuracies['reconcile']
+stream_acc = accuracies['stream_chunk']
+t_stat_acc, p_value_acc = ttest_ind(reconcile_acc, stream_acc)
+print(f"Accuracy T-test: t={t_stat_acc:.2f}, p={p_value_acc:.4f}")
+
+# Visualizations
+df_lat = pd.DataFrame({'Reconcile': reconcile_lat, 'Stream Chunk': stream_lat})
+df_acc = pd.DataFrame({'Reconcile': accuracies['reconcile'], 'Stream Chunk': accuracies['stream_chunk']})
+
+plt.figure(figsize=(12, 5))
+plt.subplot(1, 2, 1)
+sns.boxplot(data=df_lat)
+plt.title('Latency Distribution (ms)')
+plt.ylabel('Latency (ms)')
+plt.subplot(1, 2, 2)
+sns.boxplot(data=df_acc)
+plt.title('Accuracy Distribution')
+plt.ylabel('Accuracy')
+plt.savefig('performance.png')
+plt.show()
+
+# Summary statistics
+print("
+Latency Summary:")
+print(df_lat.describe())
+print("
+Accuracy Summary:")
+print(df_acc.describe())
+
+
+
+================================================================================
+FILE: data\development\scientists.json
+================================================================================
+[
+  {
+    "id": "scientist_1",
+    "name": "Albert Einstein",
+    "type": ["scientist", "physicist"],
+    "description": "Theoretical physicist who developed relativity theory",
+    "birthYear": 1879,
+    "deathYear": 1955,
+    "nationality": "German"
+  },
+  {
+    "id": "scientist_2",
+    "name": "Marie Curie",
+    "type": ["scientist", "chemist", "physicist"],
+    "description": "Pioneering researcher on radioactivity",
+    "birthYear": 1867,
+    "deathYear": 1934,
+    "nationality": "Polish"
+  },
+  {
+    "id": "scientist_3",
+    "name": "Isaac Newton",
+    "type": ["scientist", "mathematician", "physicist"],
+    "description": "Formulated laws of motion and universal gravitation",
+    "birthYear": 1643,
+    "deathYear": 1727,
+    "nationality": "English"
+  }
+]
+
+
+
+================================================================================
+FILE: data\production\companies.json
+================================================================================
+[
+  {
+    "id": "company_1",
+    "name": "Google LLC",
+    "type": ["company", "technology"],
+    "description": "Multinational technology company specializing in Internet-related services",
+    "founded": 1998,
+    "employees": 156500,
+    "headquarters": "Mountain View, California"
+  },
+  {
+    "id": "company_2",
+    "name": "Microsoft Corporation",
+    "type": ["company", "technology"],
+    "description": "Multinational technology corporation producing computer software",
+    "founded": 1975,
+    "employees": 181000,
+    "headquarters": "Redmond, Washington"
+  }
+]
+
+
+
+================================================================================
+FILE: data\sample.json
+================================================================================
+[
+  { "name": "Albert Einstein", "type": "scientist" },
+  { "name": "Marie Curie", "type": "scientist" },
+  { "name": "Isaac Newton", "type": "scientist" }
+]
+
+
+
+================================================================================
+FILE: data\sample.txt
+================================================================================
+Sample text data for testing reconciliation service.
+Contains information about famous scientists and their contributions.
+
+
+
+================================================================================
+FILE: netlify.toml
+================================================================================
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NODE_ENV = "production"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/reconcile"
+  to = "/.netlify/functions/api/reconcile"
+  status = 200
+
+[[redirects]]
+  from = "/suggest"
+  to = "/.netlify/functions/api/suggest"
+  status = 200
+
+[[redirects]]
+  from = "/preview/*"
+  to = "/.netlify/functions/api/preview/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/extend"
+  to = "/.netlify/functions/api/extend"
+  status = 200
+
+[[redirects]]
+  from = "/metadata"
+  to = "/.netlify/functions/api"
+  status = 200
+
+[[redirects]]
+  from = "/docs"
+  to = "/.netlify/functions/api/docs"
+  status = 200
+
+[[redirects]]
+  from = "/health"
+  to = "/.netlify/functions/api/health"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions.api]
+  timeout = 30
+
+
+
+================================================================================
+FILE: netlify\functions\api.js
+================================================================================
+const express = require('express');
+const serverless = require('serverless-http');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const helmet = require('helmet');
+const compression = require('compression');
+const { RateLimiterMemory } = require('rate-limiter-flexible');
+const winston = require('winston');
+
+// Import route handlers
+const reconcileRoutes = require('./routes/reconcile');
+const suggestRoutes = require('./routes/suggest');
+const previewRoutes = require('./routes/preview');
+const extendRoutes = require('./routes/extend');
+const docsRoutes = require('./routes/docs');
+
+const app = express();
+
+// Security middleware
+app.use(helmet());
+app.use(compression());
+
+// Rate limiting
+const rateLimiter = new RateLimiterMemory({
+  points: 100, // 100 requests
+  duration: 60, // per 60 seconds
+});
+
+app.use((req, res, next) => {
+  rateLimiter.consume(req.ip)
+    .then(() => next())
+    .catch(() => res.status(429).json({ error: 'Too many requests' }));
+});
+
+// CORS configuration
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production' 
+    ? ['https://your-domain.netlify.app'] 
+    : ['http://localhost:3000', 'http://localhost:8888'],
+  credentials: true
+}));
+
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
+
+// Logger configuration
+const logger = winston.createLogger({
+  level: 'info',
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.json()
+  ),
+  transports: [
+    new winston.transports.File({ filename: 'error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'combined.log' })
+  ]
+});
+
+if (process.env.NODE_ENV !== 'production') {
+  logger.add(new winston.transports.Console({
+    format: winston.format.simple()
+  }));
+}
+
+// Request logging middleware
+app.use((req, res, next) => {
+  logger.info({
+    method: req.method,
+    url: req.url,
+    ip: req.ip,
+    userAgent: req.get('User-Agent')
+  });
+  next();
+});
+
+// Routes
+app.use('/.netlify/functions/api', reconcileRoutes);
+app.use('/.netlify/functions/api', suggestRoutes);
+app.use('/.netlify/functions/api', previewRoutes);
+app.use('/.netlify/functions/api', extendRoutes);
+app.use('/.netlify/functions/api', docsRoutes);
+
+// Health check endpoint
+app.get('/.netlify/functions/api/health', (req, res) => {
+  res.json({ 
+    status: 'OK', 
+    timestamp: new Date().toISOString(),
+    version: '2.0.0',
+    environment: process.env.NODE_ENV || 'development'
+  });
+});
+
+// Error handling middleware
+app.use((error, req, res, next) => {
+  logger.error({
+    error: error.message,
+    stack: error.stack,
+    url: req.url,
+    method: req.method
+  });
+
+  res.status(error.status || 500).json({
+    error: process.env.NODE_ENV === 'production' 
+      ? 'Internal server error' 
+      : error.message
+  });
+});
+
+// 404 handler
+app.use('*', (req, res) => {
+  res.status(404).json({ error: 'Endpoint not found' });
+});
+
+module.exports.handler = serverless(app);
+
+
+
+================================================================================
+FILE: netlify\functions\extend.js
+================================================================================
+const { callGemini } = require('./utils');
+
+exports.handler = async (event) => {
+  try {
+    const { ids = [], properties = [] } = JSON.parse(event.body || '{}');
+    const results = { rows: {} };
+
+    for (const id of ids) {
+      const prompt = Extend data for entity ID "" with properties: . Return as JSON with values for each property as array of {str or num}.;
+      const llmResponse = await callGemini(prompt, {
+        type: "object",
+        properties: properties.reduce((acc, prop) => ({
+          ...acc,
+          [prop.id]: {
+            type: "array",
+            items: { type: "object", properties: { str: { type: "string" }, num: { type: "number" } } },
+          },
+        }), {}),
+      });
+      results.rows[id] = llmResponse;
+    }
+
+    return {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify(results),
+    };
+  } catch (error) {
+    console.error('Extend error:', error);
+    return {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify({ rows: {} }),
+    };
+  }
+};
+
+
+
+================================================================================
+FILE: netlify\functions\extend-propose.js
+================================================================================
+const { callGemini } = require('./utils');
+
+exports.handler = async (event) => {
+  try {
+    const { type = '', limit = 10 } = JSON.parse(event.body || '{}');
+    const prompt = Propose properties for type "", limit to . Return as JSON with properties array of {id, name}.;
+    const llmResponse = await callGemini(prompt, {
+      type: "object",
+      properties: {
+        properties: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              id: { type: "string" },
+              name: { type: "string" },
+            },
+          },
+        },
+      },
+    });
+    return {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify(llmResponse),
+    };
+  } catch (error) {
+    console.error('Propose properties error:', error);
+    return {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify({ properties: [] }),
+    };
+  }
+};
+
+
+
+================================================================================
+FILE: netlify\functions\metadata.js
+================================================================================
+exports.handler = async (event, context) => {
+  // Use environment variable BASE_URL or fallback to localhost
+  const baseUrl = process.env.BASE_URL || "http://localhost:8888";
+
+  return {
+    statusCode: 200,
+    headers: { "Access-Control-Allow-Origin": "*" },
+    body: JSON.stringify({
+      name: "Universal Reconciliation Service",
+      identifierSpace: "http://example.com/identifiers",
+      schemaSpace: "http://example.com/schemas",
+      defaultTypes: [{ id: "/general", name: "General Entity" }],
+      view: { url: "http://example.com/view/{{id}}" },
+      preview: { url: `${baseUrl}/preview?id={{id}}`, width: 400, height: 200 },
+      suggest: {
+        entity: { service_url: baseUrl, service_path: "/suggest/entity" },
+        type: { service_url: baseUrl, service_path: "/suggest/type" },
+        property: { service_url: baseUrl, service_path: "/suggest/property" },
+      },
+      extend: {
+        propose_properties: { service_url: baseUrl, service_path: "/extend/propose" },
+        property_settings: [
+          { name: "maxItems", label: "Maximum number of values", type: "number", default: 1 },
+        ],
+      },
+    }),
+  };
+};
+
+
+
+================================================================================
+FILE: netlify\functions\preview.js
+================================================================================
+const { callGemini } = require('./utils');
+
+exports.handler = async (event) => {
+  try {
+    const { id = '' } = event.queryStringParameters;
+    const prompt = Generate a preview for entity with ID "". Return as JSON with html containing the preview content.;
+    const llmResponse = await callGemini(prompt, {
+      type: "object",
+      properties: { html: { type: "string" } },
+    });
+    return {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify(llmResponse),
+    };
+  } catch (error) {
+    console.error('Preview error:', error);
+    return {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify({ html: '<p>Error generating preview</p>' }),
+    };
+  }
+};
+
+
+
+================================================================================
+FILE: netlify\functions\reconcile.js
+================================================================================
+const { callGemini, getReconcileSchema } = require('./utils');
+
+exports.handler = async (event) => {
+  try {
+    const queries = JSON.parse(event.body?.queries || event.queryStringParameters?.queries || '{}');
+    const callback = event.queryStringParameters?.callback;
+    const results = {};
+
+    for (const [key, query] of Object.entries(queries)) {
+      const prompt = Reconcile query: , Type: , Limit: , Properties: ;
+      const llmResponse = await callGemini(prompt, getReconcileSchema());
+      results[key] = { result: llmResponse.result || [] };
+    }
+
+    const response = {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify(results),
+    };
+
+    if (callback) {
+      response.headers["Content-Type"] = "application/javascript";
+      response.body = ${callback}();
+    }
+
+    return response;
+  } catch (error) {
+    console.error('Reconcile error:', error);
+    return {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify({}),
+    };
+  }
+};
+
+
+
+================================================================================
+FILE: netlify\functions\stream-chunk.js
+================================================================================
+const fs = require('fs').promises;
+const path = require('path');
+const { callGemini } = require('./utils');
+
+exports.handler = async (event) => {
+  try {
+    const { input } = JSON.parse(event.body || '{}');
+    if (!input) {
+      return {
+        statusCode: 400,
+        headers: { "Access-Control-Allow-Origin": "*" },
+        body: JSON.stringify({ error: 'Input required' }),
+      };
+    }
+
+    const chunks = [];
+    for (let i = 0; i < input.length; i += 3) {
+      chunks.push(input.slice(i, i + 3));
+    }
+
+    const dataDir = path.join(__dirname, '../../data');
+    const files = await fs.readdir(dataDir);
+    const matches = [];
+
+    for (const file of files) {
+      if (file.endsWith('.txt') || file.endsWith('.json')) {
+        const content = await fs.readFile(path.join(dataDir, file), 'utf8');
+        let fileData = content;
+        if (file.endsWith('.json')) {
+          fileData = JSON.stringify(JSON.parse(content));
+        }
+
+        for (const chunk of chunks) {
+          if (fileData.toLowerCase().includes(chunk.toLowerCase())) {
+            const prompt = Match chunk "" in file . Return context (20 chars before/after).;
+            const llmResponse = await callGemini(prompt, {
+              type: 'object',
+              properties: { context: { type: 'string' } },
+            });
+            matches.push({
+              chunk,
+              file,
+              context: llmResponse.context || fileData.slice(Math.max(0, fileData.indexOf(chunk) - 20), fileData.indexOf(chunk) + 23),
+            });
+          }
+        }
+      }
+    }
+
+    return {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify({ matches }),
+    };
+  } catch (error) {
+    console.error('Stream chunk error:', error);
+    return {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify({ matches: [] }),
+    };
+  }
+};
+
+
+
+================================================================================
+FILE: netlify\functions\suggest-entity.js
+================================================================================
+const { callGemini } = require('./utils');
+
+exports.handler = async (event) => {
+  try {
+    const { prefix = '', type = '' } = event.queryStringParameters;
+    const prompt = Suggest entities starting with "" for type "". Return as JSON with result array of {id, name, description}.;
+    const llmResponse = await callGemini(prompt, {
+      type: "object",
+      properties: {
+        result: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              id: { type: "string" },
+              name: { type: "string" },
+              description: { type: "string" },
+            },
+          },
+        },
+      },
+    });
+    return {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify(llmResponse),
+    };
+  } catch (error) {
+    console.error('Suggest entity error:', error);
+    return {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify({ result: [] }),
+    };
+  }
+};
+
+
+
+================================================================================
+FILE: netlify\functions\suggest-property.js
+================================================================================
+const { callGemini } = require('./utils');
+
+exports.handler = async (event) => {
+  try {
+    const { prefix = '', type = '' } = event.queryStringParameters;
+    const prompt = Suggest properties starting with "" for type "". Return as JSON with result array of {id, name}.;
+    const llmResponse = await callGemini(prompt, {
+      type: "object",
+      properties: {
+        result: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              id: { type: "string" },
+              name: { type: "string" },
+            },
+          },
+        },
+      },
+    });
+    return {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify(llmResponse),
+    };
+  } catch (error) {
+    console.error('Suggest property error:', error);
+    return {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify({ result: [] }),
+    };
+  }
+};
+
+
+
+================================================================================
+FILE: netlify\functions\suggest-type.js
+================================================================================
+const { callGemini } = require('./utils');
+
+exports.handler = async (event) => {
+  try {
+    const { prefix = '' } = event.queryStringParameters;
+    const prompt = Suggest types starting with "". Return as JSON with result array of {id, name}.;
+    const llmResponse = await callGemini(prompt, {
+      type: "object",
+      properties: {
+        result: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              id: { type: "string" },
+              name: { type: "string" },
+            },
+          },
+        },
+      },
+    });
+    return {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify(llmResponse),
+    };
+  } catch (error) {
+    console.error('Suggest type error:', error);
+    return {
+      statusCode: 200,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify({ result: [] }),
+    };
+  }
+};
+
+
+
+================================================================================
+FILE: netlify\functions\utils.js
+================================================================================
+const fetch = require('node-fetch');
+
+async function callGemini(prompt, schema) {
+  const apiKey = process.env.GEMINI_API_KEY;
+  const response = await fetch(https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      contents: [{ role: 'user', parts: [{ text: prompt }] }],
+      generationConfig: { responseMimeType: 'application/json', responseSchema: schema },
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(API error: );
+  }
+
+  const result = await response.json();
+  return JSON.parse(result.candidates[0].content.parts[0].text);
+}
+
+function getReconcileSchema() {
+  return {
+    type: 'object',
+    properties: {
+      result: {
+        type: 'array',
+        items: {
+          type: 'object',
+          properties: {
+            id: { type: 'string' },
+            name: { type: 'string' },
+            score: { type: 'number' },
+            match: { type: 'boolean' },
+            type: {
+              type: 'array',
+              items: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' } } },
+            },
+          },
+        },
+      },
+    },
+  };
+}
+
+module.exports = { callGemini, getReconcileSchema };
+
+
+
+================================================================================
+FILE: package.json
+================================================================================
+{
+  "name": "universal-reconciliation-service",
+  "version": "2.0.1",
+  "description": "Enhanced Universal Reconciliation Service with Gemini AI integration",
+  "main": "netlify/functions/api.js",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step required'",
+    "deploy": "netlify deploy --prod",
+    "test": "jest",
+    "test:performance": "node tests/performance/load-test.js",
+    "test:accuracy": "node tests/accuracy/accuracy-test.js",
+    "docs:generate": "node utils/generate-docs.js",
+    "lint": "eslint .",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "express": "^4.19.0",
+    "serverless-http": "^3.2.1",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2",
+    "node-fetch": "^2.6.13",
+    "@google/generative-ai": "^0.4.0",
+    "rate-limiter-flexible": "^2.5.0",
+    "helmet": "^7.2.0",
+    "compression": "^1.7.4",
+    "joi": "^17.12.0",
+    "winston": "^3.13.0",
+    "dotenv": "^16.3.1",
+    "netlify-cli": "^15.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.8.0",
+    "eslint": "^8.58.0",
+    "supertest": "^6.4.2",
+    "artillery": "^1.7.9",
+    "swagger-jsdoc": "^6.2.9",
+    "swagger-ui-express": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "keywords": [
+    "reconciliation",
+    "api",
+    "openrefine",
+    "netlify",
+    "serverless",
+    "gemini-ai",
+    "entity-matching"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
+
+
+
+================================================================================
+FILE: public\index.html
+================================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Reconciliation Service</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      max-width: 1000px; 
+      margin: 0 auto; 
+      padding: 20px; 
+      line-height: 1.6;
+      color: #333;
+    }
+    .header { 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+    .endpoint { 
+      background: #f8f9fa; 
+      padding: 1.5rem; 
+      margin: 1rem 0; 
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+    }
+    code { 
+      background: #e9ecef; 
+      padding: 0.2rem 0.4rem; 
+      border-radius: 3px;
+      font-family: 'Consolas', monospace;
+    }
+    .pre { 
+      background: #2d3748; 
+      color: #e2e8f0; 
+      padding: 1rem; 
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+    .badge-get { background: #48bb78; color: white; }
+    .badge-post { background: #4299e1; color: white; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>?? Universal Reconciliation Service</h1>
+    <p>OpenRefine-compatible reconciliation API powered by Google Gemini AI</p>
+  </div>
+
+  <h2>?? API Endpoints</h2>
+
+  <div class="endpoint">
+    <h3><span class="badge badge-get">GET</span> Service Metadata</h3>
+    <code>GET /.netlify/functions/api</code>
+    <p>Returns service metadata and capabilities.</p>
+  </div>
+
+  <div class="endpoint">
+    <h3><span class="badgage badge-post">POST</span> Reconciliation</h3>
+    <code>POST /.netlify/functions/api/reconcile</code>
+    <p>Main reconciliation endpoint for entity matching.</p>
+    <div class="pre">
+// Example request body
+{
+  "q0": {
+    "query": "Albert Einstein",
+    "type": "scientist",
+    "limit": 5
+  }
+}
+    </div>
+  </div>
+
+  <div class="endpoint">
+    <h3><span class="badge badge-get">GET</span> Entity Suggestions</h3>
+    <code>GET /.netlify/functions/api/suggest?prefix=alb&type=scientist</code>
+    <p>Provides type-ahead suggestions for entities.</p>
+  </div>
+
+  <div class="endpoint">
+    <h3><span class="badge badge-get">GET</span> Entity Preview</h3>
+    <code>GET /.netlify/functions/api/preview?id=entity_123</code>
+    <p>Returns HTML preview for a matched entity.</p>
+  </div>
+
+  <div class="endpoint">
+    <h3><span class="badge badge-post">POST</span> Data Extension</h3>
+    <code>POST /.netlify/functions/api/extend</code>
+    <p>Extends entity data with additional properties.</p>
+  </div>
+
+  <h2>?? Setup Instructions</h2>
+  <ol>
+    <li>Set your GEMINI_API_KEY in environment variables</li>
+    <li>Deploy to Netlify or run locally with netlify dev</li>
+    <li>Configure OpenRefine to use your endpoint URL</li>
+  </ol>
+
+  <h2>?? Features</h2>
+  <ul>
+    <li>? Full OpenRefine Reconciliation API compliance</li>
+    <li>? AI-powered entity matching with Gemini</li>
+    <li>? Rate limiting and security headers</li>
+    <li>? Comprehensive error handling</li>
+    <li>? Real-time streaming support</li>
+    <li>? Multiple data source integration</li>
+  </ul>
+</body>
+</html>
+
+
+
+================================================================================
+FILE: routes\reconcile.js
+================================================================================
+const { GoogleGenerativeAI } = require('@google/generative-ai');
+const Joi = require('joi');
+
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+
+const reconcileSchema = Joi.object({
+  queries: Joi.object().pattern(
+    Joi.string(),
+    Joi.object({
+      query: Joi.string().required(),
+      type: Joi.string().optional(),
+      limit: Joi.number().optional(),
+      properties: Joi.array().items(Joi.object()).optional()
+    })
+  ).required()
+});
+
+async function reconcileEntities(query, type = null, limit = 5) {
+  try {
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    
+    const prompt = "You are an entity reconciliation service. Match the following query to known entities.\n" +
+                   "Query: \"" + query + "\"\n" +
+                   (type ? "Entity type: " + type + "\n" : "") +
+                   "\nReturn a JSON array of matches with this structure:\n" +
+                   "[{\n" +
+                   '  "id": "unique_identifier",\n' +
+                   '  "name": "matched_entity_name",\n' +
+                   '  "type": ["entity_type"],\n' +
+                   '  "score": 0.95,\n' +
+                   '  "match": true,\n' +
+                   '  "features": {\n' +
+                   '    "description": "brief_description",\n' +
+                   '    "confidence": "high/medium/low"\n' +
+                   '  }\n' +
+                   "}]\n\n" +
+                   "Limit to " + limit + " best matches.";
+
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    const text = response.text();
+    
+    // Extract JSON from response
+    const jsonMatch = text.match(/\[[\s\S]*\]/);
+    if (jsonMatch) {
+      return JSON.parse(jsonMatch[0]);
+    }
+    
+    return [];
+  } catch (error) {
+    console.error('Gemini API error:', error);
+    throw new Error('Failed to reconcile entities');
+  }
+}
+
+module.exports = (req, res, next) => {
+  if (req.path === '/reconcile' && req.method === 'POST') {
+    const { error, value } = reconcileSchema.validate(req.body);
+    
+    if (error) {
+      return res.status(400).json({ error: error.details[0].message });
+    }
+
+    const { queries } = value;
+    const results = {};
+
+    Promise.all(
+      Object.entries(queries).map(async ([queryId, queryData]) => {
+        try {
+          const matches = await reconcileEntities(
+            queryData.query,
+            queryData.type,
+            queryData.limit || 5
+          );
+          
+          results[queryId] = {
+            result: matches.map(match => ({
+              id: match.id,
+              name: match.name,
+              type: match.type,
+              score: match.score,
+              match: match.match,
+              features: match.features
+            }))
+          };
+        } catch (error) {
+          results[queryId] = {
+            error: error.message
+          };
+        }
+      })
+    ).then(() => {
+      res.json(results);
+    }).catch(next);
+  } else {
+    next();
+  }
+};
+
+
+
+================================================================================
+FILE: routes\suggest.js
+================================================================================
+const { GoogleGenerativeAI } = require('@google/generative-ai');
+
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+
+async function getSuggestions(prefix, type = null, limit = 10) {
+  try {
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    
+    const prompt = "Suggest entity names starting with: \"" + prefix + "\"\n" +
+                   (type ? "Entity type: " + type + "\n" : "") +
+                   "\nReturn a JSON array of suggestions:\n" +
+                   "[{\n" +
+                   '  "id": "unique_id",\n' +
+                   '  "name": "suggested_name",\n' +
+                   '  "type": ["entity_type"],\n' +
+                   '  "score": 0.9\n' +
+                   "}]\n\n" +
+                   "Limit to " + limit + " suggestions.";
+
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    const text = response.text();
+    
+    const jsonMatch = text.match(/\[[\s\S]*\]/);
+    if (jsonMatch) {
+      return JSON.parse(jsonMatch[0]);
+    }
+    
+    return [];
+  } catch (error) {
+    console.error('Suggestion error:', error);
+    throw new Error('Failed to get suggestions');
+  }
+}
+
+module.exports = (req, res, next) => {
+  if (req.path === '/suggest' && req.method === 'GET') {
+    const { prefix, type, limit = 10 } = req.query;
+    
+    if (!prefix) {
+      return res.status(400).json({ error: 'Prefix parameter is required' });
+    }
+
+    getSuggestions(prefix, type, parseInt(limit))
+      .then(suggestions => {
+        res.json({
+          result: suggestions.map(suggestion => ({
+            id: suggestion.id,
+            name: suggestion.name,
+            type: suggestion.type,
+            score: suggestion.score
+          }))
+        });
+      })
+      .catch(next);
+  } else {
+    next();
+  }
+};
+
+
+
+================================================================================
+FILE: src\api.js
+================================================================================
+const express = require('express');
+const metadataRouter = require('./routes/metadata');
+const reconcileRouter = require('./routes/reconcile');
+const suggestEntityRouter = require('./routes/suggest-entity');
+// ...other routers
+const previewRouter = require('./routes/preview');
+const extendProposeRouter = require('./routes/extend-propose');
+const extendRouter = require('./routes/extend');
+const streamChunkRouter = require('./routes/stream-chunk');
+
+const app = express();
+app.use(express.json());
+
+// Enable CORS
+app.use((req, res, next) => {
+  res.set('Access-Control-Allow-Origin', '*');
+  next();
+});
+
+// Mount routes
+app.use('/metadata', metadataRouter);
+app.use('/reconcile', reconcileRouter);
+app.use('/suggest/entity', suggestEntityRouter);
+app.use('/suggest/type', require('./routes/suggest-type'));
+app.use('/suggest/property', require('./routes/suggest-property'));
+app.use('/preview', previewRouter);
+app.use('/extend/propose', extendProposeRouter);
+app.use('/extend', extendRouter);
+app.use('/stream-chunk', streamChunkRouter);
+
+// Error middleware
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(err.status || 500).json({
+    status: err.status || 500,
+    error: err.name,
+    message: err.message,
+    timestamp: new Date().toISOString(),
+  });
+});
+
+module.exports = app;
+
+
+
+================================================================================
+FILE: src\routes\extend.js
+================================================================================
+/**
+ * @swagger
+ * /extend:
+ *   get:
+ *     summary: Example GET endpoint for extend
+ *     description: Detailed description for the extend endpoint.
+ *     responses:
+ *       200:
+ *         description: Success response.
+ */
+const express = require('express');
+const router = express.Router();
+const { getModelResponse } = require('../utils');
+
+// Extend Route
+// This endpoint extends data by adding properties to entities.
+router.post('/', async (req, res) => {
+  try {
+    const ids = req.body.ids;
+    const properties = req.body.properties;
+
+    if (!ids || !properties || !Array.isArray(ids) || !Array.isArray(properties)) {
+      return res.status(400).json({ error: 'Missing or invalid ids or properties.' });
+    }
+
+    const data = {};
+    for (const id of ids) {
+      const userPrompt = `For the entity with ID "${id}", retrieve the values for the following properties: ${properties.map(p => p.id).join(', ')}. Provide the result in a JSON object where keys are the property IDs and values are the corresponding values.`;
+      const modelResponse = await getModelResponse(userPrompt, true, false);
+
+      const values = JSON.parse(modelResponse.text);
+      data[id] = values;
+    }
+
+    res.status(200).json({
+      meta: properties.map(p => ({ id: p.id, name: p.name })),
+      rows: ids.map(id => ({ id: id, values: properties.map(p => data[id][p.id] ? [{ str: data[id][p.id] }] : []) }))
+    });
+  } catch (error) {
+    console.error('Extend error:', error);
+    res.status(500).json({ error: 'Failed to extend data.' });
+  }
+});
+
+module.exports = router;
+
+
+
+================================================================================
+FILE: src\routes\extend-propose.js
+================================================================================
+/**
+ * @swagger
+ * /extend-propose:
+ *   get:
+ *     summary: Example GET endpoint for extend-propose
+ *     description: Detailed description for the extend-propose endpoint.
+ *     responses:
+ *       200:
+ *         description: Success response.
+ */
+const express = require('express');
+const router = express.Router();
+const { getModelResponse } = require('../utils');
+const { v4: uuidv4 } = require('uuid');
+
+// Extend Propose Route
+// This endpoint proposes properties for data extension.
+router.post('/', async (req, res) => {
+  try {
+    const type = req.body.type;
+    const userPrompt = `Propose 5 properties to extend data for the entity type "${type}". Provide the suggestions in JSON format. Each property should have an 'id' and 'name'.`;
+    const modelResponse = await getModelResponse(userPrompt, true, false);
+
+    const properties = JSON.parse(modelResponse.text);
+
+    res.status(200).json({
+      properties: properties.map(p => ({
+        id: p.id || uuidv4(),
+        name: p.name
+      }))
+    });
+  } catch (error) {
+    console.error('Extend propose error:', error);
+    res.status(500).json({ error: 'Failed to propose properties.' });
+  }
+});
+
+module.exports = router;
+
+
+
+================================================================================
+FILE: src\routes\metadata.js
+================================================================================
+/**
+ * @swagger
+ * /metadata:
+ *   get:
+ *     summary: Example GET endpoint for metadata
+ *     description: Detailed description for the metadata endpoint.
+ *     responses:
+ *       200:
+ *         description: Success response.
+ */
+// src/routes/metadata.js
+const express = require('express');
+const router = express.Router();
+
+router.get('/', (req, res) => {
+  const baseUrl = `${req.protocol}://${req.get('host')}`;
+  res.json({
+    name: 'Universal Reconciliation Service',
+    identifierSpace: 'http://example.com/identifiers',
+    schemaSpace: 'http://example.com/schemas',
+    defaultTypes: [{ id: '/general', name: 'General Entity' }],
+    view: { url: 'http://example.com/view/{{id}}' },
+    preview: {
+      url: `${baseUrl}/preview?id={{id}}`,
+      width: 400,
+      height: 200,
+    },
+    suggest: {
+      entity: { service_url: baseUrl, service_path: '/suggest/entity' },
+      type: { service_url: baseUrl, service_path: '/suggest/type' },
+      property: { service_url: baseUrl, service_path: '/suggest/property' },
+    },
+    extend: {
+      propose_properties: { service_url: baseUrl, service_path: '/extend/propose' },
+      property_settings: [
+        {
+          name: 'maxItems',
+          label: 'Maximum number of values',
+          type: 'number',
+          default: 1,
+        },
+      ],
+    },
+  });
+});
+
+module.exports = router;
+
+
+
+================================================================================
+FILE: src\routes\preview.js
+================================================================================
+/**
+ * @swagger
+ * /preview:
+ *   get:
+ *     summary: Example GET endpoint for preview
+ *     description: Detailed description for the preview endpoint.
+ *     responses:
+ *       200:
+ *         description: Success response.
+ */
+const express = require('express');
+const router = express.Router();
+const { getModelResponse } = require('../utils');
+
+// Preview Route
+// This endpoint generates a preview of an entity.
+router.get('/', async (req, res) => {
+  try {
+    const id = req.query.id;
+    if (!id) {
+      return res.status(400).send('Entity ID is required.');
+    }
+
+    const userPrompt = `Generate a short HTML description for an entity with the ID "${id}". Make sure the HTML is well-formed.`;
+    const modelResponse = await getModelResponse(userPrompt, true, false);
+
+    const htmlContent = modelResponse.text;
+
+    res.status(200).send(htmlContent);
+  } catch (error) {
+    console.error('Preview error:', error);
+    res.status(500).send('Failed to generate preview.');
+  }
+});
+
+module.exports = router;
+
+
+
+================================================================================
+FILE: src\routes\stream-chunk.js
+================================================================================
+/**
+ * @swagger
+ * /stream-chunk:
+ *   get:
+ *     summary: Example GET endpoint for stream-chunk
+ *     description: Detailed description for the stream-chunk endpoint.
+ *     responses:
+ *       200:
+ *         description: Success response.
+ */
+const express = require('express');
+const router = express.Router();
+const { getModelResponse } = require('../utils');
+const path = require('path');
+const fs = require('fs');
+
+// Stream Chunk Route
+// This endpoint handles real-time stream chunk matching.
+router.post('/', async (req, res) => {
+  try {
+    const { input, fileName } = req.body;
+    if (!input || !fileName) {
+      return res.status(400).json({ error: 'Input text and file name are required.' });
+    }
+
+    const filePath = path.join(__dirname, '..', '..', 'data', fileName);
+    if (!fs.existsSync(filePath)) {
+      return res.status(404).json({ error: 'File not found.' });
+    }
+
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    const userPrompt = `Given the input chunk "${input}" and the following data:\n\n---\n${fileContent}\n---\n\nDetermine the best match from the data for the input chunk. Provide a JSON object with 'match' and 'confidence' (0-100) properties. If no match is found, set 'match' to null.`;
+    const modelResponse = await getModelResponse(userPrompt, true, false);
+
+    const result = JSON.parse(modelResponse.text);
+
+    res.status(200).json({
+      match: result.match,
+      confidence: result.confidence / 100
+    });
+  } catch (error) {
+    console.error('Stream chunk error:', error);
+    res.status(500).json({ error: 'Failed to process stream chunk.' });
+  }
+});
+
+module.exports = router;
+
+
+
+
+================================================================================
+FILE: src\routes\suggest-property.js
+================================================================================
+/**
+ * @swagger
+ * /suggest-property:
+ *   get:
+ *     summary: Example GET endpoint for suggest-property
+ *     description: Detailed description for the suggest-property endpoint.
+ *     responses:
+ *       200:
+ *         description: Success response.
+ */
+const express = require('express');
+const router = express.Router();
+const { getModelResponse } = require('../utils');
+const { v4: uuidv4 } = require('uuid');
+
+// Suggest Property Route
+// This endpoint suggests properties based on a query.
+router.get('/', async (req, res) => {
+  try {
+    const query = req.query.prefix;
+    const type = req.query.type;
+    if (!query) {
+      return res.status(400).json({ error: 'Query prefix is required.' });
+    }
+
+    let userPrompt;
+    if (type) {
+      userPrompt = `Suggest 5 properties for a data type named "${type}" that start with "${query}". Provide the suggestions in JSON format, each with a 'name' and 'id'.`;
+    } else {
+      userPrompt = `Suggest 5 properties that start with "${query}" in JSON format. Each property should have a 'name' and 'id'.`;
+    }
+    
+    const modelResponse = await getModelResponse(userPrompt, true, false);
+    const suggestions = JSON.parse(modelResponse.text);
+
+    res.status(200).json({
+      result: suggestions.map(s => ({
+        id: s.id || uuidv4(),
+        name: s.name
+      }))
+    });
+  } catch (error) {
+    console.error('Suggest property error:', error);
+    res.status(500).json({ error: 'Failed to get property suggestions.' });
+  }
+});
+
+module.exports = router;
+
+
+
+================================================================================
+FILE: src\swagger.js
+================================================================================
+const swaggerJsdoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
+
+const baseUrl = process.env.BASE_URL || 'http://localhost:8888';
+
+const options = {
+  definition: {
+    openapi: '3.0.3',
+    info: {
+      title: 'Universal Reconciliation Service API',
+      version: '1.0.0',
+      description: 'API for reconciliation service using Express and Gemini API',
+      contact: {
+        name: 'Google',
+        email: 'support@example.com',
+      },
+      license: {
+        name: 'MIT',
+        url: 'https://opensource.org/licenses/MIT',
+      },
+    },
+    servers: [
+      {
+        url: baseUrl,
+        description: 'Base URL of the API',
+      },
+    ],
+  },
+  apis: ['./netlify/functions/routes/*.js'],
+};
+
+const swaggerSpec = swaggerJsdoc(options);
+
+function setupSwagger(app) {
+  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+}
+
+module.exports = setupSwagger;
+
+
+
+================================================================================
+FILE: src\utils.js
+================================================================================
+const { GoogleGenerativeAI } = require('@google/generative-ai');
+const { v4: uuidv4 } = require('uuid');
+const path = require('path');
+const fs = require('fs');
+require('dotenv').config();
+
+const API_KEY = proceupdatess.env.GEMINI_API_KEY;
+if (!API_KEY) {
+  console.error("GEMINI_API_KEY is not set. Please set the environment variable.");
+  process.exit(1);
+}
+const genAI = new GoogleGenerativeAI(API_KEY);
+
+// Helper function to get the Gemini model response
+async function getModelResponse(prompt, isJson, useSearch) {
+  try {
+    const generationConfig = isJson ? { responseMimeType: "application/json" } : {};
+    const tools = useSearch ? [{ google_search: {} }] : undefined;
+
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-preview-05-20", generationConfig, tools });
+
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    const text = response.text();
+
+    return { text };
+  } catch (error) {
+    console.error('Gemini API error:', error);
+    throw new Error('Failed to get response from Gemini API.');
+  }
+}
+
+// Helper function to get service metadata
+function getServiceMetadata() {
+  return {
+    name: "Universal Reconciliation Service API",
+    identifierSpace: "[http://www.freebase.com/ns/freebase](http://www.freebase.com/ns/freebase)",
+    schemaSpace: "[http://www.freebase.com/ns/type.type](http://www.freebase.com/ns/type.type)",
+    view: {
+      url: "{{id}}"
+    },
+    defaultTypes: [{
+      id: "/common/topic",
+      name: "Topic"
+    }],
+    reconcile: {
+      path: "/reconcile",
+      serviceUrl: "/.netlify/functions/api"
+    },
+    suggest: {
+      entity: {
+        path: "/suggest/entity",
+        serviceUrl: "/.netlify/functions/api"
+      },
+      type: {
+        path: "/suggest/type",
+        serviceUrl: "/.netlify/functions/api"
+      },
+      property: {
+        path: "/suggest/property",
+        serviceUrl: "/.netlify/functions/api"
+      }
+    },
+    preview: {
+      path: "/preview",
+      serviceUrl: "/.netlify/functions/api"
+    },
+    extend: {
+      propose_properties: {
+        path: "/extend/propose",
+        serviceUrl: "/.netlify/functions/api"
+      },
+      serviceUrl: "/.netlify/functions/api"
+    }
+  };
+}
+
+// Helper function to handle reconciliation matching
+async function getMatchingResults(queries) {
+  const results = {};
+  for (const qid in queries) {
+    const query = queries[qid];
+    const userPrompt = `Reconcile the entity "${query.query}" against entities of type "${query.type}". Provide a list of 5 possible matches in JSON format, each with a 'name', 'id', 'score' (0-100), and 'type' property. The 'score' should reflect the confidence of the match.`;
+    const modelResponse = await getModelResponse(userPrompt, true, false);
+
+    const matches = JSON.parse(modelResponse.text);
+
+    results[qid] = {
+      result: matches.map(match => ({
+        id: match.id || uuidv4(),
+        name: match.name,
+        score: match.score / 100,
+        match: match.score > 70 ? true : false,
+        type: [{
+          id: match.type,
+          name: match.type
+        }]
+      }))
+    };
+  }
+  return results;
+}
+
+// Helper function to handle suggestions
+async function getSuggestions(type, prefix) {
+  let userPrompt;
+  switch (type) {
+    case 'entity':
+      userPrompt = `Suggest 5 entities related to "${prefix}" in JSON format. Each entity should have a 'name' and 'id'.`;
+      break;
+    case 'type':
+      userPrompt = `Suggest 5 data types related to "${prefix}" in JSON format. Each type should have a 'name' and 'id'.`;
+      break;
+    case 'property':
+      userPrompt = `Suggest 5 properties that start with "${prefix}" in JSON format. Each property should have a 'name' and 'id'.`;
+      break;
+    default:
+      throw new Error(`Invalid suggestion type: ${type}`);
+  }
+
+  const modelResponse = await getModelResponse(userPrompt, true, false);
+  const suggestions = JSON.parse(modelResponse.text);
+
+  return {
+    result: suggestions.map(s => ({
+      id: s.id || uuidv4(),
+      name: s.name,
+      description: s.description || ""
+    }))
+  };
+}
+
+// Helper function to get preview HTML
+async function getPreviewHTML(id) {
+  const userPrompt = `Generate a short HTML description for an entity with the ID "${id}". Make sure the HTML is well-formed.`;
+  const modelResponse = await getModelResponse(userPrompt, true, false);
+  return modelResponse.text;
+}
+
+// Helper function to get extended properties
+async function getExtendedProperties(ids, properties) {
+  const data = {};
+  for (const id of ids) {
+    const userPrompt = `For the entity with ID "${id}", retrieve the values for the following properties: ${properties.map(p => p.id).join(', ')}. Provide the result in a JSON object where keys are the property IDs and values are the corresponding values.`;
+    const modelResponse = await getModelResponse(userPrompt, true, false);
+
+    const values = JSON.parse(modelResponse.text);
+    data[id] = values;
+  }
+  return {
+    meta: properties.map(p => ({ id: p.id, name: p.name })),
+    rows: ids.map(id => ({ id: id, values: properties.map(p => data[id][p.id] ? [{ str: data[id][p.id] }] : []) }))
+  };
+}
+
+
+module.exports = {
+  getServiceMetadata,
+  getModelResponse,
+  getMatchingResults,
+  getSuggestions,
+  getPreviewHTML,
+  getExtendedProperties,
+};
+
+
+
+
+================================================================================
+FILE: test_reconciliation.js
+================================================================================
+import { promises as fs } from 'fs';
+import path from 'path';
+
+// --- Configuration ---
+// Set the base URL for your reconciliation service here.
+// NOTE: This is a placeholder. You must replace it with the actual URL of your service.
+const SERVICE_URL = "http://localhost:5000/reconcile";
+const DATASET_DIR = "dataset";
+const PRODUCTION_DIR = path.join(DATASET_DIR, "production");
+const DEVELOPMENT_DIR = path.join(DATASET_DIR, "development");
+
+/**
+ * Loads a JSON dataset, sends reconciliation queries, and prints the results.
+ *
+ * @param {string} filePath The path to the JSON dataset file.
+ * @param {string} serviceUrl The URL of the reconciliation service endpoint.
+ */
+async function runReconciliationTest(filePath, serviceUrl) {
+    console.log(\n--- Testing dataset: \ ---);
+
+    let testData;
+    // Load the test data from the JSON file.
+    try {
+        const fileContent = await fs.readFile(filePath, 'utf-8');
+        testData = JSON.parse(fileContent);
+    } catch (error) {
+        if (error.code === 'ENOENT') {
+            console.error(ERROR: File not found at \);
+        } else {
+            console.error(ERROR: Invalid JSON in file at \);
+            console.error(error.message);
+        }
+        return;
+    }
+
+    // Prepare a list of queries for the API call.
+    const queries = {};
+    testData.forEach((item, i) => {
+        // We use a unique key for each query (e.g., "q0", "q1", ...)
+        queries[q\] = { "query": item.query || "" };
+    });
+
+    // Send the request to the reconciliation service.
+    try {
+        const response = await fetch(serviceUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ queries: JSON.stringify(queries) })
+        });
+
+        if (!response.ok) {
+            throw new Error(HTTP error! Status: \);
+        }
+
+        const apiResults = await response.json();
+
+        // Process and validate the results.
+        testData.forEach((item, i) => {
+            const queryKey = q\;
+            
+            // Check if the API returned a result for this query.
+            if (!apiResults[queryKey]) {
+                console.log(FAIL: '\' - No result found for query key '\');
+                return;
+            }
+
+            const queryResult = apiResults[queryKey].result || [];
+            
+            // Check if the result list is not empty.
+            if (queryResult.length === 0) {
+                console.log(FAIL: '\' - Result list is empty);
+                return;
+            }
+
+            // Simple validation: Check if the top candidate's name matches the expected name.
+            const topCandidate = queryResult[0];
+            const reconciledName = topCandidate.name || "";
+            const expectedName = item.name || "";
+
+            // A successful match.
+            if (reconciledName === expectedName) {
+                console.log(SUCCESS: '\' -> '\');
+            } else {
+                console.log(FAIL: '\' - Expected '\', got '\');
+            }
+        });
+
+    } catch (error) {
+        console.error(ERROR: Failed to connect to service at \. Please ensure the service is running.);
+        console.error(Exception: \);
+    }
+}
+
+async function main() {
+    console.log("Starting reconciliation service test suite...");
+    console.log("------------------------------------------");
+
+    const allFiles = [];
+
+    // Get a list of all JSON files in the development and production directories.
+    try {
+        if (await fs.stat(DEVELOPMENT_DIR).then(() => true).catch(() => false)) {
+            const devFiles = (await fs.readdir(DEVELOPMENT_DIR)).filter(filename => filename.endsWith(".json"));
+            allFiles.push(...devFiles.map(file => path.join(DEVELOPMENT_DIR, file)));
+        }
+    } catch (e) { /* directory does not exist */ }
+
+    try {
+        if (await fs.stat(PRODUCTION_DIR).then(() => true).catch(() => false)) {
+            const prodFiles = (await fs.readdir(PRODUCTION_DIR)).filter(filename => filename.endsWith(".json"));
+            allFiles.push(...prodFiles.map(file => path.join(PRODUCTION_DIR, file)));
+        }
+    } catch (e) { /* directory does not exist */ }
+
+    if (allFiles.length === 0) {
+        console.log("No test dataset files found. Please run the generation scripts first.");
+        return;
+    }
+
+    // Run the tests for each discovered file.
+    for (const file of allFiles) {
+        await runReconciliationTest(file, SERVICE_URL);
+    }
+}
+
+main();
+
+
+
+================================================================================
+FILE: tests\accuracy.test.js
+================================================================================
+const request = require('supertest');
+
+// Set the base URL from an environment variable for flexibility.
+const baseUrl = process.env.BASE_URL || 'http://localhost:8888/.netlify/functions/api';
+
+describe('Accuracy Tests', () => {
+  // Tests the accuracy of the reconciliation endpoint.
+  test('Reconcile accuracy for a known entity', async () => {
+    const response = await request(baseUrl)
+      .post('/reconcile')
+      .send({ queries: { q0: { query: 'Paris', type: '/location' } } });
+
+    // The first result should contain "Paris" and have a high confidence score.
+    const result = response.body.q0.result[0];
+    expect(result.name).toContain('Paris');
+    expect(result.score).toBeGreaterThan(0.8);
+  });
+
+  // Tests the accuracy of the stream-chunk endpoint.
+  test('Stream chunk accuracy for a valid input', async () => {
+    const response = await request(baseUrl)
+      .post('/stream-chunk')
+      .send({ input: 'Apple Inc.', fileName: 'sample.json' });
+
+    // The API should return a high-confidence match.
+    const result = response.body;
+    expect(result.match).toBe('Apple Inc.');
+    expect(result.confidence).toBeGreaterThan(0.8);
+  });
+});
+
+
+
+================================================================================
+FILE: tests\api.test.js
+================================================================================
+const request = require('supertest');
+const app = require('../netlify/functions/api');
+
+describe('Reconciliation Service API', () => {
+  test('GET /health should return status OK', async () => {
+    const response = await request(app).get('/.netlify/functions/api/health');
+    expect(response.status).toBe(200);
+    expect(response.body.status).toBe('OK');
+  });
+
+  test('GET /metadata should return service info', async () => {
+    const response = await request(app).get('/.netlify/functions/api');
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveProperty('name');
+    expect(response.body).toHaveProperty('identifierSpace');
+  });
+
+  test('POST /reconcile should validate input', async () => {
+    const response = await request(app)
+      .post('/.netlify/functions/api/reconcile')
+      .send({ invalid: 'data' });
+    
+    expect(response.status).toBe(400);
+  });
+});
+
+
+
+================================================================================
+FILE: tests\performance.test.js
+================================================================================
+const request = require('supertest');
+
+// Set the base URL from an environment variable for flexibility.
+const baseUrl = process.env.BASE_URL || 'http://localhost:8888/.netlify/functions/api';
+
+describe('Performance Tests', () => {
+  // Tests the latency of the reconciliation endpoint.
+  test('Reconcile endpoint latency', async () => {
+    const start = Date.now();
+    await request(baseUrl)
+      .post('/reconcile')
+      .send({ queries: { q0: { query: 'Paris', type: '/location', limit: 3 } } });
+      
+    const latency = Date.now() - start;
+    console.log(`Reconcile latency: ${latency}ms`);
+    // Ensure the response time is less than 10 seconds.
+    expect(latency).toBeLessThan(10000);
+  });
+
+  // Tests the latency of the stream chunk endpoint.
+  test('Stream chunk endpoint latency', async () => {
+    const start = Date.now();
+    await request(baseUrl)
+      .post('/stream-chunk')
+      .send({ input: 'Apple Inc.', fileName: 'sample.json' });
+
+    const latency = Date.now() - start;
+    console.log(`Stream chunk latency: ${latency}ms`);
+    // Ensure the response time is less than 10 seconds.
+    expect(latency).toBeLessThan(10000);
+  });
+});
+
+
+
+================================================================================
+FILE: tests\stream.test.js
+================================================================================
+const request = require('supertest');
+
+// Set the base URL from an environment variable for flexibility.
+const baseUrl = process.env.BASE_URL || 'http://localhost:8888/.netlify/functions/api';
+
+describe('Stream Chunk Tests', () => {
+  // Tests that the endpoint returns the correct structure for a valid chunk.
+  test('Returns correct match and confidence for a valid chunk', async () => {
+    const response = await request(baseUrl)
+      .post('/stream-chunk')
+      .send({ input: 'Apple Inc.', fileName: 'sample.json' });
+    
+    // The new API returns a single `match` and `confidence` score.
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveProperty('match');
+    expect(response.body).toHaveProperty('confidence');
+    expect(typeof response.body.match).toBe('string');
+    expect(typeof response.body.confidence).toBe('number');
+  });
+
+  // Tests that the endpoint handles empty input gracefully.
+  test('Handles empty input and missing filename', async () => {
+    const response = await request(baseUrl)
+      .post('/stream-chunk')
+      .send({ input: '', fileName: '' });
+      
+    // The API should return a 400 Bad Request error.
+    expect(response.status).toBe(400);
+    expect(response.body.error).toBe('Input text and file name are required.');
+  });
+});
+
+
+
+================================================================================
+FILE: utils\gemini-service.js
+================================================================================
+const { GoogleGenerativeAI } = require('@google/generative-ai');
+
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+
+class GeminiService {
+  static async generateContent(prompt, options = {}) {
+    try {
+      const model = genAI.getGenerativeModel({ 
+        model: options.model || "gemini-pro",
+        generationConfig: {
+          temperature: options.temperature || 0.7,
+          maxOutputTokens: options.maxTokens || 2048,
+        }
+      });
+
+      const result = await model.generateContent(prompt);
+      const response = await result.response;
+      return response.text();
+    } catch (error) {
+      console.error('Gemini API Error:', error);
+      throw new Error(`Gemini API call failed: ${error.message}`);
+    }
+  }
+
+  static async extractJSONFromResponse(text) {
+    try {
+      const jsonMatch = text.match(/\[[\s\S]*\]/) || text.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        return JSON.parse(jsonMatch[0]);
+      }
+      return null;
+    } catch (error) {
+      console.error('JSON extraction error:', error);
+      return null;
+    }
+  }
+
+  static async validateApiKey() {
+    if (!process.env.GEMINI_API_KEY) {
+      throw new Error('GEMINI_API_KEY environment variable is not set');
+    }
+    
+    try {
+      const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+      await model.generateContent('test');
+      return true;
+    } catch (error) {
+      throw new Error(`Invalid Gemini API key: ${error.message}`);
+    }
+  }
+}
+
+module.exports = GeminiService;
+
+
+
+
+================================================================================
+================================ AUDIT SUMMARY =================================
+================================================================================
+
+Audit completed: 2025-09-07 06:46:59
+Project location: C:\Users\Fred\Documents\GitHub\universal-reconciliation-service
+Total files scanned: 39
+Total files included in report: 37
+Report file size: 67.86 KB
+
+Ignored patterns:
+*.env
+*.ps1
+*.key
+*.pem
+*.pfx
+*.cert
+*.crt
+*.secret
+*.private
+credentials*
+config.*
+appsettings.*.json
+web.config
+app.config
+connectionstrings.*
+secrets.*
+*.token
+*.jwt
+node_modules
+bin
+obj
+packages
+__pycache__
+.git
+.vs
+.vscode
+.idea
+dist
+build
+target
+out
+logs
+temp
+tmp
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.local
+.env.production
+.netlify/
+dist/
+build/
+*.log
+logs/
+pids/
+*.pid
+*.seed
+*.pid.lock
+coverage/
+.nyc_output/
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+tmp/
+temp/
+
+This report was generated by the Project Audit Script.

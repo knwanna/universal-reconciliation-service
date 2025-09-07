@@ -1,9 +1,0 @@
-[
-  { "name": "S&P 500 Index", "query": "Standard & Poor's 500" },
-  { "name": "Dow Jones Industrial Average", "query": "Dow Jones" },
-  { "name": "Bitcoin", "query": "Bitcoin", "type": "cryptocurrency" },
-  { "name": "Ethereum", "query": "ETH", "type": "cryptocurrency" },
-  { "name": "Treasury Bill", "query": "T-bill", "type": "security" },
-  { "name": "Exchange-Traded Fund", "query": "ETF", "type": "investment" },
-  { "name": "Mutual Fund", "query": "Mutual Fund", "type": "investment" }
-]

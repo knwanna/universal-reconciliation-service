@@ -1,2 +1,0 @@
-Sample text data for testing reconciliation service.
-Contains information about famous scientists and their contributions.
