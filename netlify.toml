@@ -3,11 +3,16 @@
   functions = "src/functions"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20
   NODE_ENV = "production"
+  node_version = "20"
 
 [functions]
   node_bundler = "esbuild"
+
+  [functions."api"]
+    external_node_modules = ["serverless-http"]
+
 
 [[redirects]]
   from = "/api/*"
