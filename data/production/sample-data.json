@@ -1,0 +1,9 @@
+[
+  {
+    "id": "sample_1",
+    "name": "Sample Entity",
+    "type": ["general"],
+    "description": "Sample data for production testing",
+    "created": "2025-01-01"
+  }
+]

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Reconciliation Service</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      max-width: 1000px; 
+      margin: 0 auto; 
+      padding: 20px; 
+      line-height: 1.6;
+      color: #333;
+    }
+    .header { 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+    .endpoint { 
+      background: #f8f9fa; 
+      padding: 1.5rem; 
+      margin: 1rem 0; 
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+    }
+    code { 
+      background: #e9ecef; 
+      padding: 0.2rem 0.4rem; 
+      border-radius: 3px;
+      font-family: 'Consolas', monospace;
+    }
+    .pre { 
+      background: #2d3748; 
+      color: #e2e8f0; 
+      padding: 1rem; 
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+    .badge-get { background: #48bb78; color: white; }
+    .badge-post { background: #4299e1; color: white; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Universal Reconciliation Service</h1>
+    <p>OpenRefine-compatible reconciliation API powered by Google Gemini AI</p>
+  </div>
+
+  <h2>API Endpoints</h2>
+
+  <div class="endpoint">
+    <h3><span class="badge badge-get">GET</span> Service Metadata</h3>
+    <code>GET /api/metadata</code>
+    <p>Returns service metadata and capabilities.</p>
+  </div>
+
+  <div class="endpoint">
+    <h3><span class="badge badge-post">POST</span> Reconciliation</h3>
+    <code>POST /api/reconcile</code>
+    <p>Main reconciliation endpoint for entity matching.</p>
+  </div>
+
+  <div class="endpoint">
+    <h3><span class="badge badge-get">GET</span> Entity Suggestions</h3>
+    <code>GET /api/suggest?prefix=alb&type=scientist</code>
+    <p>Provides type-ahead suggestions for entities.</p>
+  </div>
+
+  <div class="endpoint">
+    <h3><span class="badge badge-get">GET</span> Entity Preview</h3>
+    <code>GET /api/preview?id=entity_123</code>
+    <p>Returns HTML preview for a matched entity.</p>
+  </div>
+
+  <div class="endpoint">
+    <h3><span class="badge badge-post">POST</span> Data Extension</h3>
+    <code>POST /api/extend</code>
+    <p>Extends entity data with additional properties.</p>
+  </div>
+
+  <h2>Setup Instructions</h2>
+  <ol>
+    <li>Set your GEMINI_API_KEY in environment variables</li>
+    <li>Deploy to Netlify or run locally with npm run dev</li>
+    <li>Configure OpenRefine to use your endpoint URL</li>
+  </ol>
+
+  <h2>Features</h2>
+  <ul>
+    <li>Full OpenRefine Reconciliation API compliance</li>
+    <li>AI-powered entity matching with Gemini</li>
+    <li>Rate limiting and security headers</li>
+    <li>Comprehensive error handling</li>
+    <li>Multiple data source integration</li>
+  </ul>
+</body>
+</html>
